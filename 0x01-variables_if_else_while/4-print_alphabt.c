@@ -7,17 +7,16 @@
 
 int main(void)
 {
-        char alpha;
+	char alpha;
 
-        for (alpha = 'a'; alpha <= 'z'; alpha++)
-        {
-        if (alpha == 'q' || alpha == 'e')
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	{
+	if (alpha == 'q' || alpha == 'e')
 	{
 		continue;
 	}
-
-		putchar(alpha);
-        }
-        putchar('\n');
-        return (0);
+	putchar(alpha);
+	}
+	putchar('\n');
+	return (0);
 }
