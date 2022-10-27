@@ -9,6 +9,7 @@ char *cap_string(char *str)
 {
 	int count;
 
+	str[0] = _toupper(str[0]);
 	for (count = 0; str[count] != '\0'; count++)
 	{
 		switch (str[count])
