@@ -19,7 +19,7 @@ char *rot13(char *str)
 			if (str[count] == alpha[i])
 			{
 				str[count] = encr[i];
-				continue;
+				i = 52;
 			}
 		}
 	}
