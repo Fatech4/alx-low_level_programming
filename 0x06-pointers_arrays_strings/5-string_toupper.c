@@ -9,7 +9,12 @@ char _toupper(char letter);
 char *string_toupper(char *str)
 {
 	int count;
-	int len = sizeof(str);
+	int len = 0;
+
+	for (count = 0; str[count] != '\0'; count++)
+	{
+		len++;
+	}
 
 	for (count = 0; count < len; count++)
 		str[count] = _toupper(str[count]);
