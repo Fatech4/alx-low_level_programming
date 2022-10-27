@@ -9,33 +9,20 @@ char enc(char str);
 char *leet(char *str)
 {
 	int count;
+	int i;
+	char alpha[] = "aAeEoOtTlL";
+	char encr[] = "4433007711";
 
 	for (count = 0; str[count] != '\0'; count++)
 	{
-		str[count] = enc(str[count]);
+		for (i = 0; i < 10; i++)
+		{
+			if (str[count] == alpha[i])
+			{
+			str[count] = encr[i];
+			}
+		}
 	}
 	return (str);
 }
-/**
- * enc - A function that encode the letter in 1337 format
- * @str: The letter parameter
- * Return: The the encoded letter
- */
 
-char enc(char str)
-{
-	if ((str == 'a') || (str == 'A'))
-		str = '4';
-	else if ((str == 'e') || (str == 'E'))
-		str = '3';
-	else if ((str == 'o') || (str == 'O'))
-		str = '0';
-	else if ((str == 't') || (str == 'T'))
-		str = '7';
-	else if ((str == 'l') || (str == 'L'))
-		str = '1';
-	else
-	{}
-
-	return (str);
-}
