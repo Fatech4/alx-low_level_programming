@@ -15,6 +15,7 @@ char *cap_string(char *str)
 		{
 			case ' ':
 			case '\n':
+			case '\t':
 			case ',':
 			case ';':
 			case '.':
@@ -27,13 +28,10 @@ char *cap_string(char *str)
 			case '}':
 				str[count + 1] = _toupper(str[count + 1]);
 				break;
-			case '\t':
-				str[count] = ' ';
-				str[count + 1] = _toupper(str[count + 1]);
-				break;
 
 		}
 	}
+	str[count] = '\0';
 	return (str);
 }
 
