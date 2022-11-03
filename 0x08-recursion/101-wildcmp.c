@@ -1,4 +1,7 @@
 #include "main.h"
+char *test(char *s5, char *s6, char *t5, char *t6);
+char *wildcard(char *s3, char *s4);
+
 /**
  * test - tests if wildcard is a proper match
  * @s5: string to compare
