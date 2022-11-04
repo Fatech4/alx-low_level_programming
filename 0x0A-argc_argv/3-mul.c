@@ -12,7 +12,7 @@ int main(int __attribute__ ((unused)) argc, char *argv[])
 	{
 		printf("Error\n");
 	}
-	else 
+	else
 	{
 		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	}
