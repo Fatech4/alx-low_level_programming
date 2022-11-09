@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 int _strlen(char *str);
 /**
@@ -16,16 +17,19 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	s = malloc(_strlen(str));
+	s = malloc(_strlen(str) + 1);
 	if (s == NULL)
 	{
 		return (NULL);
 	}
+	else
+	{
 	for (i = 0; i < _strlen(str); i++)
 	{
 		s[i] = str[i];
 	}
 	s[i] = str[i];
+	}
 	return (s);
 	free(s);
 }
