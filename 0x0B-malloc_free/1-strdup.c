@@ -25,8 +25,9 @@ char *_strdup(char *str)
 	{
 		s[i] = str[i];
 	}
+	s[i] = str[i];
 	return (s);
-
+	free(s);
 }
 /**
  * _strlen - A function that count the characters in as string
