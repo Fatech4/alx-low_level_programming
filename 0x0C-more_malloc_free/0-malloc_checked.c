@@ -9,12 +9,13 @@
 void *malloc_checked(unsigned int b)
 {
 	void *space;
+
 	space = malloc(b);
 
 	if (space == NULL)
 	{
 		exit(98);
 	}
-	else 
+	else
 		return (space);
 }
