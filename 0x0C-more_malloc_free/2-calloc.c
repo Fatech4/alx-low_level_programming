@@ -23,6 +23,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	else
 	{
+		int i;
+		int *num = space;
+
+		for (i = 0; i < (int)(nmemb * size); i = i + 4)
+		{
+			num[i] = 0;
+		}
 		return (space);
 	}
 }
