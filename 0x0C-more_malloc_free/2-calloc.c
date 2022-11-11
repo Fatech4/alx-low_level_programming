@@ -24,9 +24,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	else
 	{
 		int i;
-		int *num = space;
+		int *num = (int *)space;
 
-		for (i = 0; i < (int)(nmemb * size); i = i + 4)
+		for (i = 0; i < ((int)(nmemb)); ++i)
 		{
 			num[i] = 0;
 		}
