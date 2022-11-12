@@ -10,7 +10,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *space;
+	char *space;
 
 	if ((nmemb || size) == 0)
 	{
@@ -25,11 +25,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	else
 	{
 		int i;
-		char *num = (char *)space;
 
-		for (i = 0; i < ((int)(nmemb)); i++)
+		for (i = 0; i < ((int)(nmemb * size)); i++)
 		{
-			num[i] = 0;
+			space[i] = 0;
 		}
 		return (space);
 	}
