@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		print_error();
 		exit(98);
 	}
-	if (check_int(argv[1]) > 0 && check_int(argv[2]) > 0)
+	if ((check_int(argv[1])) && (check_int(argv[2])))
 	{
 		mul = check_int(argv[1]) * check_int(argv[2]);
 		my_putchar(mul);
@@ -47,7 +47,7 @@ int check_int(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] >= '0' || str[i] <= '9')
+		if (str[i] >= '0' &&  str[i] <= '9')
 		{
 			if (i == 0)
 			{
