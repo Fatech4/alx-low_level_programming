@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		{NULL, NULL}
 	};
 
-	if ((argc != 4) || (argv[2][1] != '\0'))
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	func = get_op_func(operator);
-	if (func == NULL)
+	if ((func == NULL) || (argv[2][1] != '\0'))
 	{
 		printf("Error\n");
 		exit(99);
