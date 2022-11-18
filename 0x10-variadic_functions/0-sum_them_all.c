@@ -6,7 +6,7 @@
  * @n: The size of the arguments supplied
  * Return: Sum of all its parameters
  */
-int sum_them_all(const unsigned n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	int i;
 	int sum = 0;
