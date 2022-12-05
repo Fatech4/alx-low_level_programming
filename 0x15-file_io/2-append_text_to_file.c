@@ -1,12 +1,12 @@
 #include "main.h"
 int _strlen(char *str);
 /**
- * create_file - A function that creates a file
+ * append_text_to_file - A function that appends text at the end of a file
  * @filename: File name
- * @text_content: String to write to file
- * Return: 1 on success and -1 onf failure
+ * @text_content: String to add at the end of the file
+ * Return: ! on success ad -1 on failure
  */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, len;
 
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 		len = _strlen(text_content);
 	}
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_APPEND | O_WRONLY);
 	if (fd == -1)
 	{
 		return (-1);
